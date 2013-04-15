@@ -1,0 +1,136 @@
+
+body {
+	margin: 0px;
+}
+
+#wrapper {
+	min-width: 320px;
+}
+
+/***** HEADER CSS *****/
+
+#header {
+	width: 100%;
+	background-image: url('banner2.jpg');
+	background-position: center -200px;
+	background-repeat: no-repeat;
+}
+
+#logo {
+	width: 100%;
+	padding: 50px 0px 50px 0px;
+}
+#logo img {
+	margin: 0 auto;
+	width: 150px;
+}
+
+#overview {
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	color: #ffffff;
+	text-shadow: 0px 0px 10px #000;
+	font-weight: bold;
+}
+#overview span {
+	font-size: 40px;
+}
+
+.div-button {
+	display: table;
+	margin: 50px auto;
+}
+
+/***** MAIN CSS *****/
+
+#main {
+	width: 100%;
+	background-color: #ffffff;
+	border-top: dotted 3px #000000;
+}
+
+.heading {
+	max-width: 980px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 30px 10px;
+	border-bottom: dashed thin #cccccc;
+	text-align: center;
+	font-size: 30px;
+	color: #222222;
+}
+.content {
+	max-width: 980px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 30px 10px;
+	text-align: center;
+}
+.user-type {
+	max-width: 980px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 30px 10px 0px;
+	text-align: center;
+}
+.user-type img {
+	margin: 0px auto 10px;
+}
+
+.darkBg {
+	background-color: #333333;
+	color: #eeeeee !important;
+	border-top: dotted 3px #ffffff;
+	border-bottom: dotted 3px #222222;
+}
+.darkBg .heading {
+	color: #ffffff !important;
+	border-color: #666666;
+}
+
+.textbox {
+	background-color: #222222;
+	color: #ffffff;
+	border-color: #111111;
+}
+
+.form {
+	margin: 10px auto 30px !important;
+}
+.fielddesc {
+	color: #888888;
+}
+
+/***** FOOTER CSS *****/
+
+#footer {
+	width: 100%;
+	display: table;
+	background-color: #222222;
+	padding: 20px 0px;
+}
+
+#footer-logo {
+	width: 200px;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 20px;
+	border-right: solid thin #000000;
+}
+#footer-logo img {
+	margin: 0 auto;
+}
+
+#contact {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0px 20px;
+	color: gray;
+	font-size: 15px;
+	border-left: solid thin #444444;
+}
+#contact p {
+	margin: 20px 0px;
+}
+

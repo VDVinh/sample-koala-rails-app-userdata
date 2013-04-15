@@ -1,0 +1,56 @@
+
+.form {
+	max-width: 980px;
+	min-width: 320px;
+	margin: 10px auto 30px;
+}
+.form .textbox {
+	width: 408px;
+}
+.form .cbox {
+	width: 100%;
+	height: 41px;
+}
+.form .slider {
+	width: 100%;
+}
+
+
+.divtable {
+	display: table;
+	margin: auto;
+	width: 680px;
+}
+
+.divrow {
+	display: table-row;
+}
+
+.divcell {
+	display: table-cell;
+	vertical-align: top;
+	padding: 10px;
+}
+
+
+.left {
+	width: 210px;
+	text-align: right;
+}
+.right {
+	width: 430px;
+	text-align: left;
+}
+
+
+.fieldname {
+	font-weight: bold;
+	display: block;
+}
+
+.fielddesc {
+	font-size: 15px;
+	display: block;
+}
+
+

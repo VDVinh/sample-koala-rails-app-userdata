@@ -1,0 +1,103 @@
+body {
+	margin: 0px;
+}
+
+#wrapper {
+	min-width: 320px;
+}
+
+/***** HEADER CSS *****/
+
+#header {
+	height: 50px;
+	padding: 0px 20px;
+	background-color: #111111;
+}
+
+#logo {
+	float: left;
+}
+
+#header ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+#header ul li {
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	padding-left: 20px;
+}
+#header ul li img {
+	padding: 17px 0px;
+}
+
+#menu {
+	font-size: 15px;
+	float: right;
+	color: #ffffff;
+}
+
+/***** MAIN CSS *****/
+
+#main {
+	width: 100%;
+}
+
+.heading {
+	max-width: 980px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 30px 10px;
+	font-size: 30px;
+	text-align: center;
+	border-bottom: dashed thin #cccccc;
+	color: #f84f00;
+	/* color: #222222; */
+}
+
+.content {
+	max-width: 980px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 30px 10px;
+	text-align: center;
+}
+
+/***** FOOTER CSS *****/
+
+#footer {
+	width: 100%;
+	display: table;
+	background-color: #222222;
+	padding: 20px 0px;
+}
+
+#footer-logo {
+	width: 200px;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 20px;
+	border-right: solid thin #000000;
+}
+#footer-logo img {
+	margin: 0 auto;
+}
+
+#contact {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0px 20px;
+	color: gray;
+	font-size: 15px;
+	border-left: solid thin #444444;
+}
+#contact p {
+	margin: 20px 0px;
+}
+
+
+
+
+

@@ -1,0 +1,21 @@
+<p>
+  <b>User:</b>
+  <%= @possession.user_id %>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%= @possession.job_id %>
+</p>
+
+<p>
+  <b>Invited:</b>
+  <%= @possession.user_invited_id %>
+</p>
+<p>
+	<b> Description: </b>
+	<%=@possession.description%>
+</p>
+
+<%= link_to 'Edit', edit_possession_path(@possession) %> |
+<%= link_to 'Back', possessions_path %>

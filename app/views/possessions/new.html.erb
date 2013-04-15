@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Has Friend | Referral</title>
+
+<%= stylesheet_link_tag    "common", "site","form","jquery-ui", :media => "all" %>
+<%= javascript_include_tag "application", :media => "all" %>
+
+
+<script>
+	$(document).ready(function() {
+		$(".slider").slider({ animate: true }, { max: 10 }, { min: 0 });
+		
+		$(".s1").bind( "slidechange", function(event, ui) {
+			var value = $(".s1").slider( "option", "value" );
+			$(".p1").html(value);
+			$("#p1-value").val(value);
+		});
+		$(".s2").bind( "slidechange", function(event, ui) {
+			var value = $(".s2").slider( "option", "value" );
+			$(".p2").html(value);
+			$("#p2-value").val(value);
+		});
+		$(".s3").bind( "slidechange", function(event, ui) {
+			var value = $(".s3").slider( "option", "value" );
+			$(".p3").html(value);
+			$("#p3-value").val(value);
+		});
+		$(".s4").bind( "slidechange", function(event, ui) {
+			var value = $(".s4").slider( "option", "value" );
+			$(".p4").html(value);
+			$("#p4-value").val(value);
+		});
+	});
+</script>
+
+<!-- <script type="text/javascript" src="js/lib/cssrefresh.js"></script> -->
+
+</head>
+<body>
+<div id="wrapper">
+
+		<div id="header">
+			<div id="logo">
+				<%= image_tag "HFlogotrans.png", :width => 50%>
+			</div>
+			<ul id="menu">
+				<li><%= link_to (image_tag "home1.png"), @user%></li>
+				<li><%=link_to (image_tag "user1.png"), @user%></li>
+				<li>Coins: <%=@user.coins%></li>
+				<li><%=link_to (image_tag "signout1.png"), signout_path%></li>
+			</ul>
+		</div>
+
+
+		<div id="main">
+			<div class="form">
+				<%= form_for(@possession) do |f|%>
+				<%if @possession.errors.any?%>
+				<div class= "error-messages">
+					<h2><%= pluralize(@possession.errors.count, "error") %> prohibited this possession from being saved:</h2>
+					<ul>
+				      <% @possession.errors.full_messages.each do |msg| %>
+				        <li><%= msg %></li>
+				      <% end %>
+				    </ul>
+				</div>
+				<%end%>
+
+				<%= tag("input", {:type => 'hidden', :name => "possession[user_id]", :value => @user.id}) %>
+
+					<div class="heading">Step 1 - Pick a company</div>
+					<div class="content">Choose the best company for your friend</div>
+					
+					
+					<div class="divtable">
+						<div class="divrow">
+							<div class="divcell left">
+								<span class="fieldname">Company name</span>
+								<span class="fielddesc">Select a company</span>
+							</div>
+							<div class="divcell right">
+								<%= select "company","id", Company.all.collect{|c| [c.name, c.id]},{}, {:class => "cbox", :id =>"company_id"}%>
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell left">
+								<span class="fieldname">Position</span>
+								<span class="fielddesc">Select a position</span>
+							</div>
+							<div class="divcell right">
+								<%=f.select "job_id", Job.find(:all).collect{|j| [j.position, j.id]},{}, {:class => "cbox", :id => "job_cbox"}%>
+							</div>
+						</div>
+					</div>
+						
+						
+					<div class="heading">Step 2 - Pick your friend</div>
+					<div class="content">Choose a friend that is appropriate with the above position</div>
+					
+					
+					<div class="divtable">
+						<div class="divrow">
+							<div class="divcell left">
+								<span class="fieldname">Friend's name</span>
+								<span class="fielddesc">Select one of your friend</span>
+							</div>
+							<div class="divcell right">
+								<%@friends.each do |friend|%>
+								<div class="avatar-fb" style="display: inline-block;" title = "<%=friend["name"]%>" alt= "<%=friend["uid"]%>" >
+									<%= image_tag friend["pic_square"]%>
+									
+								</div>
+								<%end%>
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell left">
+								<span class="fieldname">Reason</span>
+								<span class="fielddesc">Why your friend should join the company</span>
+							</div>						
+							<div class="divcell right">
+								<%=f.text_area :description, :class => "textbox"%>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="heading">Step 3 - Rate your friend</div>
+					<div class="content">Evaluate your friend's abilities. Make sure that you know him well.</div>
+					
+					
+					<div class="divtable">
+						<div class="divrow">
+							<div class="divcell left">
+								<span class="fieldname">Smart</span>
+							</div>
+							<div class="divcell right">
+								<div class="slider s1"></div><div class="p1">0</div>
+								<input id='p1-value' name='possession[p1]' type='hidden' value =''/>
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell left">
+								<span class="fieldname">Experiment</span>
+							</div>
+							<div class="divcell right">
+								<div class="slider s2"></div><div class="p2">0</div>
+								<input id='p2-value' name='possession[p2]' type='hidden' value =''/>
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell left">
+								<span class="fieldname">Hardwork</span>
+							</div>
+							<div class="divcell right">
+								<div class="slider s3"></div><div class="p3">0</div>
+								<input id='p3-value' name='possession[p3]' type='hidden' value =''/>
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell left">
+								<span class="fieldname">Teamwork</span>
+							</div>
+							<div class="divcell right">
+								<div class="slider s4"></div><div class="p4">0</div>
+								<input id='p4-value' name='possession[p4]' type='hidden' value =''/>
+							</div>
+						</div>
+					</div>
+					<div style="text-align: center;">
+						<%=f.submit "Submit", :class => "button orange"%>
+					</div>
+					
+					<%end%>
+			</div>
+		</div>
+
+
+		<div id="footer">
+			<div id="footer-logo">
+				<%= image_tag "HFlogo.png" , :width => 100 %>
+			</div>
+			<div id="contact">
+				<p>Contact us</p>
+				<p>
+					Address: TGM Tech, 268 To Hien Thanh street, district 10, Ho Chi Minh city, Vietnam <br> 
+					Phone: 084 83 9907804 <br> 
+					Email: toan.nguyen@2359media.com.vn
+				</p>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

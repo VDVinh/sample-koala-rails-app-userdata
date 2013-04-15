@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Has Friend | Referral</title>
+<%= stylesheet_link_tag    "common", media: "all" %>
+<%= stylesheet_link_tag    "site", media: "all" %>
+<%= stylesheet_link_tag    "form", media: "all" %>
+<%= javascript_include_tag "gui" %>
+<%= javascript_include_tag "jquery-1.9.1" %>
+<%= javascript_include_tag "jquery-ui" %>
+<!-- <link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/site.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
+<script src="js/lib/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="js/lib/jquery-ui.js" type="text/javascript"></script>
+ -->
+<script>
+	$(document).ready(function() {
+		$(".slider").slider({ animate: true }, { max: 10 }, { min: 0 });
+		
+		$(".s1").bind( "slidechange", function(event, ui) {
+			var value = $(".s1").slider( "option", "value" );
+			$(".p1").html(value);
+		});
+		$(".s2").bind( "slidechange", function(event, ui) {
+			var value = $(".s2").slider( "option", "value" );
+			$(".p2").html(value);
+		});
+		$(".s3").bind( "slidechange", function(event, ui) {
+			var value = $(".s3").slider( "option", "value" );
+			$(".p3").html(value);
+		});
+		$(".s4").bind( "slidechange", function(event, ui) {
+			var value = $(".s4").slider( "option", "value" );
+			$(".p4").html(value);
+		});
+	});
+</script>
+
+<script src="js/gui.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/lib/cssrefresh.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+
+		<div id="header">
+			<div id="logo">
+				<img alt="" src="image/HFlogotrans.png" width="50">
+			</div>
+			<ul id="menu">
+				<li>Home</li>
+				<li>Profile</li>
+				<li>Coins: 100</li>
+			</ul>
+		</div>
+
+
+		<div id="main">
+			<div class="form">
+				<form action="">
+				
+				
+					<div class="heading">Step 1 - Pick a company</div>
+					<div class="content">Choose the best company for your friend</div>
+					
+					
+					<div class="divtable">
+						<div class="divrow">
+							<div class="divcell">
+								<span class="fieldname">Company name</span>
+								<span class="fielddesc">Select a company</span>
+							</div>
+							<div class="divcell">
+								<select class="cbox">
+									<option value="">Choose one...</option>
+								</select>
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell">
+								<span class="fieldname">Position</span>
+								<span class="fielddesc">Select a position</span>
+							</div>
+							<div class="divcell">
+								<select class="cbox">
+									<option value="">Choose one...</option>
+								</select>
+							</div>
+						</div>
+					</div>
+						
+						
+					<div class="heading">Step 2 - Pick your friend</div>
+					<div class="content">Choose a friend that is appropriate with the above position</div>
+					
+					
+					<div class="divtable">
+						<div class="divrow">
+							<div class="divcell">
+								<span class="fieldname">Friend's name</span>
+								<span class="fielddesc">Select one of your friend</span>
+							</div>
+							<div class="divcell">
+								<!-- FB list friends -->
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell">
+								<span class="fieldname">Reason</span>
+								<span class="fielddesc">Why your friend should join the company</span>
+							</div>						
+							<div class="divcell">
+								<textarea rows="10" cols="" class="textbox"></textarea>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="heading">Step 3 - Rate your friend</div>
+					<div class="content">Evaluate your friend's abilities. Make sure that you know him well.</div>
+					
+					
+					<div class="divtable">
+						<div class="divrow">
+							<div class="divcell">
+								<span class="fieldname">Smart</span>
+							</div>
+							<div class="divcell">
+								<div class="slider s1"></div><div class="p1">0</div>
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell">
+								<span class="fieldname">Experiment</span>
+							</div>
+							<div class="divcell">
+								<div class="slider s2"></div><div class="p2">0</div>
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell">
+								<span class="fieldname">Hardwork</span>
+							</div>
+							<div class="divcell">
+								<div class="slider s3"></div><div class="p3">0</div>
+							</div>
+						</div>
+						<div class="divrow">
+							<div class="divcell">
+								<span class="fieldname">Teamwork</span>
+							</div>
+							<div class="divcell">
+								<div class="slider s4"></div><div class="p4">0</div>
+							</div>
+						</div>
+					
+						<div class="divrow">
+							<div class="divcell">
+							</div>
+							<div class="divcell">
+								<input type="submit" class="button orange" value="Submit">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div id="footer">
+			<div id="footer-logo">
+				<img alt="" src="image/HFlogo.png" width="100">
+			</div>
+			<div id="contact">
+				<p>Contact us</p>
+				<p>
+					Address: TGM Tech, 268 To Hien Thanh street, district 10, Ho Chi Minh city, Vietnam <br> 
+					Phone: 084 83 9907804 <br> 
+					Email: toan.nguyen@2359media.com.vn
+				</p>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<h1>Listing Possessions</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Job</th>
+    <th>Invited ID</th>
+    
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @possessions.each do |p| %>
+  <tr>
+    <td><%= p.user_id %></td>
+    <td><%= p.job_id %></td>
+    <td><%= p.user_invited_id %></td>
+    
+    <td><%= link_to 'Show', p %></td>
+    <td><%= link_to 'Edit', edit_possession_path(p) %></td>
+    <td><%= link_to 'Destroy', p, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Possession', new_possession_path %>

@@ -1,0 +1,92 @@
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('QUICKSAND_BOOK.OTF');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Quicksand';
+	src: url('QUICKSAND_BOLD.OTF');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Quicksand';
+	src: url('QUICKSAND_BOOK_OBLIQUE.OTF');
+	font-style: italic;
+}
+
+body {
+	font: normal 17px 'Quicksand', sans-serif;
+	color: #222222;
+}
+input, textarea {
+	font: normal 17px 'Quicksand', sans-serif;
+	margin: 0px;
+}
+#header * {
+	color: white;
+}
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	margin: 0px;
+	border: 0px;
+}
+
+.clear {
+	clear: both;
+	height: 1px;
+}
+
+.button {
+	min-width: 150px;
+	padding: 7px 10px 10px 10px;
+	font-size: 20px;
+	border-radius: 22px;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	border: none;
+	border-top: solid 1px rgba(255,255,255,0.25);
+	background: -webkit-gradient(linear, center bottom, center top, 
+	from(rgba(0, 0, 0,.1) ), 
+	to(rgba(255, 255, 255, .1) ) );
+	cursor: pointer;
+}
+
+.orange {
+	background-color: #f84f00;
+}
+
+.green {
+	background-color: #2a9400;
+}
+
+.cyan {
+	color: #3AB9DB;
+}
+
+.purple {
+	color: #A966FF;
+}
+
+.textbox {
+	padding: 8px 10px;
+	border-radius: 5px;
+	border: solid thin gray;
+	min-width: 300px;
+	color: #222222;
+	box-shadow: inset 0px 1px 5px rgba(0,0,0,0.15);
+}
+
+.cbox {
+	padding: 8px 10px;
+	border-radius: 5px;
+	border: solid thin gray;
+	min-width: 300px;
+	color: #222222;
+	box-shadow: inset 0px 1px 5px rgba(0,0,0,0.15);
+}
